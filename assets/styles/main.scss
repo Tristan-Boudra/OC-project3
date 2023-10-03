@@ -1,0 +1,15 @@
+@import "components/title.scss";
+
+/* Medium devices (tablets, more/equal than 768px) */
+@media (min-width: 768px) {
+    h1{
+        color: green;
+    }
+}
+
+/* Large devices (desktops, more/equal than 1025px) */
+@media (min-width: 1025px) {
+    h1{
+        color: blue;
+    }
+}
