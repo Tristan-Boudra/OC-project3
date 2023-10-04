@@ -1,15 +1,26 @@
-@import "components/title.scss";
+@import "layout/header.scss";
+@import "base/normalize.scss";
+@import "components/step.scss";
+@import "components/restaurant.scss";
+@import "layout/footer.scss";
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
 
 /* Medium devices (tablets, more/equal than 768px) */
 @media (min-width: 768px) {
-    h1{
-        color: green;
-    }
+    // 
 }
 
 /* Large devices (desktops, more/equal than 1025px) */
 @media (min-width: 1025px) {
-    h1{
-        color: blue;
-    }
+    //
 }

@@ -1,0 +1,33 @@
+// Footer
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #353535;
+    color: white;
+    padding: 22px 25px;
+    gap: 16px;
+    .logo-footer{
+        height: 27px;
+        color: white;
+    }
+    .container-info-footer{
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+        .container-icon-footer{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 11px;
+            .footer-icon{
+                color: white;
+                font-size: 14px;
+            }
+        }
+        .text-footer{
+            color: white;
+            font-weight: 400;
+            margin: 0;
+        }
+    }
+}
