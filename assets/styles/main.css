@@ -64,21 +64,26 @@ article button:hover {
 }
 
 .steps-container {
+  display: flex;
+  justify-content: center;
   padding: 0 20px 0 20px;
   margin-top: 48px;
   margin-bottom: 68px;
 }
-.steps-container .steps {
+.steps-container .div-container {
+  width: -moz-max-content;
+  width: max-content;
+}
+.steps-container .div-container .steps {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 0;
-  padding-left: 0;
-  padding-top: 26px;
+  padding: 0;
   gap: 25px;
   width: 100%;
 }
-.steps-container .steps .step {
+.steps-container .div-container .steps .step {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -90,7 +95,7 @@ article button:hover {
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
   position: relative;
 }
-.steps-container .steps .step .container-numero {
+.steps-container .div-container .steps .step .container-numero {
   display: flex;
   position: absolute;
   justify-content: center;
@@ -101,24 +106,44 @@ article button:hover {
   border-radius: 50%;
   background: #9356DC;
 }
-.steps-container .steps .step .container-numero .numero {
+.steps-container .div-container .steps .step .container-numero .numero {
   color: white;
   font-size: 14px;
 }
-.steps-container .steps .step .mobile-icon {
+.steps-container .div-container .steps .step .mobile-icon {
   font-size: 18px;
   color: #7E7E7E;
 }
-.steps-container .steps .step .mobile-icon--active {
+.steps-container .div-container .steps .step .mobile-icon--active {
   color: #9356DC;
 }
-.steps-container .steps .step .title {
+.steps-container .div-container .steps .step .title {
   font-size: 16px;
   font-weight: 500;
   margin: 0;
 }
 
+/* Medium devices (tablets, more/equal than 768px) */
+@media (min-width: 768px) {
+  .steps-container {
+    padding: 0 180px 0 180px;
+  }
+  .steps-container .div-container .steps {
+    flex-direction: column;
+    width: -moz-max-content;
+    width: max-content;
+    gap: 25px;
+  }
+}
+/* Large devices (desktops, more/equal than 1025px) */
+@media (min-width: 1025px) {
+  .steps-container .div-container .steps {
+    flex-direction: row;
+  }
+}
 .restaurants-container {
+  display: flex;
+  justify-content: center;
   padding: 24px 20px 66px 20px;
   margin-top: 48px;
   background-color: #F6F6F6;
@@ -131,7 +156,8 @@ article button:hover {
   padding-left: 0;
   padding-top: 26px;
   gap: 18px;
-  width: 100%;
+  width: -moz-max-content;
+  width: max-content;
 }
 .restaurants-container .restaurants .restaurant {
   display: flex;
@@ -217,6 +243,45 @@ article button:hover {
   opacity: 0;
 }
 
+/* Medium devices (tablets, more/equal than 768px) */
+@media (min-width: 768px) {
+  .restaurants-container .div-container .restaurants {
+    grid-template-columns: 1fr;
+  }
+  .restaurants-container .div-container .restaurants .restaurant {
+    width: 490px;
+  }
+  .restaurants-container .div-container .restaurants .restaurant a .restaurant-img {
+    width: 490px;
+  }
+}
+/* Large devices (desktops, more/equal than 1025px) */
+@media (min-width: 1025px) {
+  .restaurants-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 180px;
+  }
+  .restaurants-container .div-container {
+    width: -moz-max-content;
+    width: max-content;
+  }
+  .restaurants-container .div-container .restaurants {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 50px 100px;
+    width: -moz-max-content;
+    width: max-content;
+  }
+  .restaurants-container .div-container .restaurants .restaurant {
+    width: -moz-max-content;
+    width: max-content;
+  }
+  .restaurants-container .div-container .restaurants .restaurant a .restaurant-img {
+    width: 490px;
+  }
+}
 footer {
   display: flex;
   flex-direction: column;
@@ -250,6 +315,20 @@ footer .container-info-footer .text-footer {
   margin: 0;
 }
 
+/* Medium devices (tablets, more/equal than 768px) */
+@media (min-width: 768px) {
+  footer {
+    flex-direction: row-reverse;
+    gap: 60px;
+    padding: 30px 25px;
+  }
+  footer .container-info-footer {
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+  }
+}
+/* Large devices (desktops, more/equal than 1025px) */
 body {
   margin: 0;
   padding: 0;

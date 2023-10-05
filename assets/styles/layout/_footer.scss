@@ -31,3 +31,22 @@ footer {
         }
     }
 }
+
+/* Medium devices (tablets, more/equal than 768px) */
+@media (min-width: 768px) {
+    footer{
+        flex-direction: row-reverse;
+        gap: 60px;
+        padding: 30px 25px;
+        .container-info-footer{
+            flex-direction: row;
+            align-items: center;
+            gap: 15px;
+        }
+    }
+}
+
+/* Large devices (desktops, more/equal than 1025px) */
+@media (min-width: 1025px) {
+    // 
+}
