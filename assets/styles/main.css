@@ -58,6 +58,10 @@ article button {
   margin-top: 27px;
   margin-bottom: 57px;
 }
+article button:hover {
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
+}
 
 .steps-container {
   padding: 0 20px 0 20px;
@@ -185,8 +189,32 @@ article button {
   font-weight: 300;
   margin: 0;
 }
-.restaurants-container .restaurants .restaurant .restaurant-info .heart-icon {
-  font-size: 21px;
+
+.heart__icon {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 16px;
+}
+.heart__icon--empty {
+  position: absolute;
+  color: black;
+}
+.heart__icon--full {
+  position: absolute;
+  opacity: 0;
+  background: linear-gradient(#FF79DA, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: all 400ms;
+}
+.heart__icon:hover .heart__icon--full {
+  opacity: 1;
+}
+.heart__icon:hover .heart__icon--empty {
+  opacity: 0;
 }
 
 footer {
