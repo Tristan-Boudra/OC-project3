@@ -2,9 +2,10 @@
 .restaurants-container{
     display: flex;
     justify-content: center;
-    padding: 24px 20px 66px 20px;
+    padding: 24px 0 66px 0;
     margin-top: 48px;
     background-color: #F6F6F6;
+    width: 100%;
     .restaurants{
         display: flex;
         flex-direction: column;
@@ -127,7 +128,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 30px 180px;
+        // padding: 30px 180px;
         .div-container{
             width: max-content;
             .restaurants{
