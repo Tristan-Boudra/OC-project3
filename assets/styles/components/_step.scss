@@ -61,11 +61,8 @@
 /* Medium devices (tablets, more/equal than 768px) */
 @media (min-width: 768px) {
     .steps-container{
-        padding: 0 180px 0 180px;
-        // display: flex;
-        // justify-content: center;
+        padding: 0 180px;
         .div-container{
-            // width: max-content;
             .steps{
                 flex-direction: column;
                 width: max-content;

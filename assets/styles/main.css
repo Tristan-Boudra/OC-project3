@@ -197,7 +197,7 @@ article button:hover {
 /* Medium devices (tablets, more/equal than 768px) */
 @media (min-width: 768px) {
   .steps-container {
-    padding: 0 180px 0 180px;
+    padding: 0 180px;
   }
   .steps-container .div-container .steps {
     flex-direction: column;
@@ -403,9 +403,11 @@ article button:hover {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  position: relative;
   background-color: white;
   border-radius: 15px;
   padding: 15px;
+  overflow: hidden;
 }
 .background-menu .section-menu .list-menu .plat-menu .info-plat {
   display: flex;
@@ -418,6 +420,36 @@ article button:hover {
 }
 .background-menu .section-menu .list-menu .plat-menu .info-plat p {
   margin: 0;
+}
+.background-menu .section-menu .list-menu .plat-menu .prix-check-plat {
+  display: flex;
+  flex-direction: row;
+}
+.background-menu .section-menu .list-menu .plat-menu .prix-check-plat .prix-plat, .background-menu .section-menu .list-menu .plat-menu .prix-check-plat .check {
+  transition: 0.3s;
+}
+.background-menu .section-menu .list-menu .plat-menu .prix-check-plat .check {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  top: 0;
+  bottom: 0;
+  right: -60px;
+  background-color: #99E2D0;
+  width: 59px;
+  border-radius: 0 15px 15px 0;
+}
+.background-menu .section-menu .list-menu .plat-menu .prix-check-plat .check .icon-check {
+  color: white;
+}
+.background-menu .section-menu .list-menu .plat-menu:hover .prix-check-plat .check {
+  opacity: 1;
+  right: 0;
+}
+.background-menu .section-menu .list-menu .plat-menu:hover .prix-check-plat .prix-plat {
+  margin-right: 60px;
 }
 .background-menu .section-boutton-menu {
   display: flex;

@@ -46,9 +46,11 @@
                 flex-direction: row;
                 align-items: center;
                 justify-content: space-between;
+                position: relative;
                 background-color: white;
                 border-radius: 15px;
                 padding: 15px;
+                overflow: hidden;
                 .info-plat{
                     display: flex;
                     flex-direction: column;
@@ -59,6 +61,40 @@
                     }
                     p{
                         margin: 0;
+                    }
+                }
+                .prix-check-plat{
+                    display: flex;
+                    flex-direction: row;
+                    .prix-plat, .check{
+                        transition: 0.3s;
+                    }
+                    .check{
+                        display: flex;
+                        position: absolute;
+                        justify-content: center;
+                        align-items: center;
+                        opacity: 0;
+                        top: 0;
+                        bottom: 0;
+                        right: -60px;
+                        background-color: #99E2D0;
+                        width: 59px;
+                        border-radius: 0 15px 15px 0;
+                        .icon-check{
+                            color: white;
+                        }
+                    }
+                }
+                &:hover{
+                    .prix-check-plat{
+                        .check{
+                            opacity: 1;
+                            right: 0;
+                        }
+                        .prix-plat{
+                            margin-right: 60px;
+                        }
                     }
                 }
             }
