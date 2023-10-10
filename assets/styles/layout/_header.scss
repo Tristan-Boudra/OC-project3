@@ -50,6 +50,11 @@ header{
 /* Large devices (desktops, more/equal than 1025px) */
 @media (min-width: 1025px) {
     header{
+        .container-logo{
+            .arrow{
+                left: 18%;
+            }
+        }
         .container-header-img{
             overflow: hidden;
             .header-img{

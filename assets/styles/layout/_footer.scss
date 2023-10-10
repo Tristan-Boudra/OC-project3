@@ -46,7 +46,10 @@ footer {
     }
 }
 
-/* Large devices (desktops, more/equal than 1025px) */
-@media (min-width: 1025px) {
-    // 
+/* Large devices (desktops, more/equal than 1440px) */
+@media (min-width: 1440px) {
+    footer{
+        // padding: 30px 330px;
+        justify-content: center;
+    }
 }

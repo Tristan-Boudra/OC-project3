@@ -56,11 +56,18 @@
                     flex-direction: column;
                     margin: 0;
                     gap: 8px;
+                    max-width: 80%;
                     h3{
                         margin: 0;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
                     }
                     p{
                         margin: 0;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
                     }
                 }
                 .prix-check-plat{
@@ -87,6 +94,9 @@
                     }
                 }
                 &:hover{
+                    .info-plat{
+                        max-width: 60%;
+                    }
                     .prix-check-plat{
                         .check{
                             opacity: 1;
@@ -133,6 +143,14 @@
 
 /* Large devices (desktops, more/equal than 1025px) */
 @media (min-width: 1025px) {
+    header{
+        .container-header-img{
+            max-height: 700px;
+            .header-img{
+                height: auto;
+            }
+        }
+    }
     main{
         display: flex;
         flex-direction: column;

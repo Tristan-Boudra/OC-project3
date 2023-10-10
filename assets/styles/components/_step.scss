@@ -45,13 +45,16 @@
                     font-size: 18px;
                     color: #7E7E7E;
                 }
-                .mobile-icon--active{
-                    color: #9356DC;
-                }
                 .title{
                     font-size: 16px;
                     font-weight: 500;
                     margin: 0;
+                }
+                &:hover{
+                    background-color: rgba(147, 86, 220, 0.2);
+                    .mobile-icon{
+                        color: #9356DC;
+                    }
                 }
             }
         }

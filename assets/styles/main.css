@@ -41,6 +41,9 @@ header .container-localisation .localisation-icon {
 /* Medium devices (tablets, more/equal than 768px) */
 /* Large devices (desktops, more/equal than 1025px) */
 @media (min-width: 1025px) {
+  header .container-logo .arrow {
+    left: 18%;
+  }
   header .container-header-img {
     overflow: hidden;
   }
@@ -96,7 +99,12 @@ footer .container-info-footer .text-footer {
     gap: 15px;
   }
 }
-/* Large devices (desktops, more/equal than 1025px) */
+/* Large devices (desktops, more/equal than 1440px) */
+@media (min-width: 1440px) {
+  footer {
+    justify-content: center;
+  }
+}
 article {
   display: flex;
   flex-direction: column;
@@ -185,13 +193,16 @@ article button:hover {
   font-size: 18px;
   color: #7E7E7E;
 }
-.steps-container .div-container .steps .step .mobile-icon--active {
-  color: #9356DC;
-}
 .steps-container .div-container .steps .step .title {
   font-size: 16px;
   font-weight: 500;
   margin: 0;
+}
+.steps-container .div-container .steps .step:hover {
+  background-color: rgba(147, 86, 220, 0.2);
+}
+.steps-container .div-container .steps .step:hover .mobile-icon {
+  color: #9356DC;
 }
 
 /* Medium devices (tablets, more/equal than 768px) */
@@ -349,8 +360,13 @@ article button:hover {
     width: -moz-max-content;
     width: max-content;
   }
-  .restaurants-container .div-container .restaurants .restaurant a .restaurant-img {
+  .restaurants-container .div-container .restaurants .restaurant a .restaurant-img-container {
+    overflow: hidden;
+    max-height: 251px;
+  }
+  .restaurants-container .div-container .restaurants .restaurant a .restaurant-img-container .restaurant-img {
     width: 490px;
+    height: auto;
   }
 }
 .background-menu {
@@ -414,12 +430,19 @@ article button:hover {
   flex-direction: column;
   margin: 0;
   gap: 8px;
+  max-width: 80%;
 }
 .background-menu .section-menu .list-menu .plat-menu .info-plat h3 {
   margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .background-menu .section-menu .list-menu .plat-menu .info-plat p {
   margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .background-menu .section-menu .list-menu .plat-menu .prix-check-plat {
   display: flex;
@@ -443,6 +466,9 @@ article button:hover {
 }
 .background-menu .section-menu .list-menu .plat-menu .prix-check-plat .check .icon-check {
   color: white;
+}
+.background-menu .section-menu .list-menu .plat-menu:hover .info-plat {
+  max-width: 60%;
 }
 .background-menu .section-menu .list-menu .plat-menu:hover .prix-check-plat .check {
   opacity: 1;
@@ -479,6 +505,12 @@ article button:hover {
 /* Medium devices (tablets, more/equal than 768px) */
 /* Large devices (desktops, more/equal than 1025px) */
 @media (min-width: 1025px) {
+  header .container-header-img {
+    max-height: 700px;
+  }
+  header .container-header-img .header-img {
+    height: auto;
+  }
   main {
     display: flex;
     flex-direction: column;
