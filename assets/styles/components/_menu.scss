@@ -147,7 +147,7 @@
         .container-header-img{
             max-height: 700px;
             .header-img{
-                height: auto;
+                object-fit: cover;
             }
         }
     }

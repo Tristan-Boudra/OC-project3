@@ -365,8 +365,8 @@ article button:hover {
     max-height: 251px;
   }
   .restaurants-container .div-container .restaurants .restaurant a .restaurant-img-container .restaurant-img {
-    width: 490px;
-    height: auto;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 .background-menu {
@@ -509,7 +509,8 @@ article button:hover {
     max-height: 700px;
   }
   header .container-header-img .header-img {
-    height: auto;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   main {
     display: flex;

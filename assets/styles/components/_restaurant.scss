@@ -142,8 +142,7 @@
                             overflow: hidden;
                             max-height: 251px;
                             .restaurant-img{
-                                width: 490px;
-                                height: auto;
+                                object-fit: cover;
                             }
                         }
                     }
