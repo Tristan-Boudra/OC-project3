@@ -1,10 +1,19 @@
 // Menu
+.header-img{
+    height: 275px;
+    width: 100%;
+    position: relative;
+    z-index: 0;
+}
 .background-menu{
     background-color: #F6F6F6;
-    border-radius: 25px;
+    border-radius: 25px 25px 0 0;
     padding: 32px 13px;
     gap: 40px;
     z-index: 3;
+    position: relative;
+    z-index: 1;
+    margin-top: -30px;
     .header-menu{
         display: flex;
         flex-direction: row;
@@ -110,6 +119,33 @@
             }
         }
     }
+
+    .entrees, .plats, .desserts {
+        opacity: 0;
+        animation: menu 0.5s forwards;
+    }
+      
+    @keyframes menu {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+        }
+        
+        .entrees {
+        animation-delay: 0s;
+        }
+        
+        .plats {
+        animation-delay: 0.5s;
+        }
+        
+        .desserts {
+        animation-delay: 1s;
+    }
+    
     .section-boutton-menu{
         display: flex;
         justify-content: center;
@@ -157,12 +193,13 @@
         justify-content: center;
         align-items: center;
         .background-menu{
-            width: 1221px;
+            max-width: 1221px;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             margin-top: -250px;
+            padding: 32px 150px;
             .header-menu{
                 justify-content: center;
                 gap: 50px;

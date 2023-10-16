@@ -24,6 +24,8 @@ header .container-logo .arrow {
 header .container-header-img .header-img {
   width: 100%;
   height: 275px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 header .container-localisation {
   display: flex;
@@ -207,9 +209,6 @@ article button:hover {
 
 /* Medium devices (tablets, more/equal than 768px) */
 @media (min-width: 768px) {
-  .steps-container {
-    padding: 0 180px;
-  }
   .steps-container .div-container .steps {
     flex-direction: column;
     width: -moz-max-content;
@@ -274,6 +273,8 @@ article button:hover {
   width: 100%;
   height: 231px;
   border-radius: 15px 15px 0 0;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .restaurants-container .restaurants .restaurant .restaurant-info {
   display: flex;
@@ -352,7 +353,7 @@ article button:hover {
   .restaurants-container .div-container .restaurants {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 50px 100px;
+    grid-gap: 50px 50px;
     width: -moz-max-content;
     width: max-content;
   }
@@ -369,12 +370,22 @@ article button:hover {
        object-fit: cover;
   }
 }
+.header-img {
+  height: 275px;
+  width: 100%;
+  position: relative;
+  z-index: 0;
+}
+
 .background-menu {
   background-color: #F6F6F6;
-  border-radius: 25px;
+  border-radius: 25px 25px 0 0;
   padding: 32px 13px;
   gap: 40px;
   z-index: 3;
+  position: relative;
+  z-index: 1;
+  margin-top: -30px;
 }
 .background-menu .header-menu {
   display: flex;
@@ -477,6 +488,27 @@ article button:hover {
 .background-menu .section-menu .list-menu .plat-menu:hover .prix-check-plat .prix-plat {
   margin-right: 60px;
 }
+.background-menu .entrees, .background-menu .plats, .background-menu .desserts {
+  opacity: 0;
+  animation: menu 0.5s forwards;
+}
+@keyframes menu {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.background-menu .entrees {
+  animation-delay: 0s;
+}
+.background-menu .plats {
+  animation-delay: 0.5s;
+}
+.background-menu .desserts {
+  animation-delay: 1s;
+}
 .background-menu .section-boutton-menu {
   display: flex;
   justify-content: center;
@@ -519,12 +551,13 @@ article button:hover {
     align-items: center;
   }
   main .background-menu {
-    width: 1221px;
+    max-width: 1221px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-top: -250px;
+    padding: 32px 150px;
   }
   main .background-menu .header-menu {
     justify-content: center;
@@ -545,5 +578,48 @@ a {
   color: inherit;
 }
 
+.loader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  animation: fadeOut 2s forwards;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #9356DC;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 /* Medium devices (tablets, more/equal than 768px) */
 /* Large devices (desktops, more/equal than 1025px) *//*# sourceMappingURL=main.css.map */
