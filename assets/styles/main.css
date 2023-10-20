@@ -378,7 +378,7 @@ article button:hover {
 }
 
 .background-menu {
-  background-color: #F6F6F6;
+  background-color: #f6f6f6;
   border-radius: 25px 25px 0 0;
   padding: 32px 13px;
   gap: 40px;
@@ -415,7 +415,7 @@ article button:hover {
   display: flex;
   width: 40px;
   height: 3px;
-  background-color: #99E2D0;
+  background-color: #99e2d0;
   margin-bottom: 12px;
 }
 .background-menu .section-menu .list-menu {
@@ -459,7 +459,8 @@ article button:hover {
   display: flex;
   flex-direction: row;
 }
-.background-menu .section-menu .list-menu .plat-menu .prix-check-plat .prix-plat, .background-menu .section-menu .list-menu .plat-menu .prix-check-plat .check {
+.background-menu .section-menu .list-menu .plat-menu .prix-check-plat .prix-plat,
+.background-menu .section-menu .list-menu .plat-menu .prix-check-plat .check {
   transition: 0.3s;
 }
 .background-menu .section-menu .list-menu .plat-menu .prix-check-plat .check {
@@ -471,7 +472,7 @@ article button:hover {
   top: 0;
   bottom: 0;
   right: -60px;
-  background-color: #99E2D0;
+  background-color: #99e2d0;
   width: 59px;
   border-radius: 0 15px 15px 0;
 }
@@ -488,9 +489,11 @@ article button:hover {
 .background-menu .section-menu .list-menu .plat-menu:hover .prix-check-plat .prix-plat {
   margin-right: 60px;
 }
-.background-menu .entrees, .background-menu .plats, .background-menu .desserts {
+.background-menu .entrees,
+.background-menu .plats,
+.background-menu .desserts {
   opacity: 0;
-  animation: menu 0.5s forwards;
+  animation: menu 1s forwards;
 }
 @keyframes menu {
   0% {
@@ -504,10 +507,10 @@ article button:hover {
   animation-delay: 0s;
 }
 .background-menu .plats {
-  animation-delay: 0.5s;
+  animation-delay: 1s;
 }
 .background-menu .desserts {
-  animation-delay: 1s;
+  animation-delay: 2s;
 }
 .background-menu .section-boutton-menu {
   display: flex;
@@ -524,13 +527,13 @@ article button:hover {
   font-weight: 500;
   color: white;
   border-radius: 25px;
-  background: var(--Button-Gradient, linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%));
+  background: var(--Button-Gradient, linear-gradient(193deg, #9356dc -11.44%, #ff79da 123.93%));
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
   border: none;
   padding: 13px 19px;
 }
 .background-menu .section-boutton-menu button:hover {
-  background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356dc -5.2%, #ff79da 110.74%);
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
 }
 

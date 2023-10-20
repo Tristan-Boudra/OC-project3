@@ -126,7 +126,6 @@
   .desserts {
     opacity: 0;
     animation: menu 1s forwards;
-    animation-delay: 1s;
   }
 
   @keyframes menu {
@@ -136,6 +135,18 @@
     100% {
       opacity: 1;
     }
+  }
+
+  .entrees{
+    animation-delay: 0s;
+  }
+
+  .plats{
+    animation-delay: 1s;
+  }
+
+  .desserts{
+    animation-delay: 2s;
   }
 
   .section-boutton-menu {
